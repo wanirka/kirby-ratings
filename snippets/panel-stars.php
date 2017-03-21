@@ -9,7 +9,7 @@ $float = is_numeric( $rating ) && floor( $rating ) != $rating;
 $half = ( $float && round( $rating ) != floor( $rating ) ) ? true : false;
 ?>
 
-<?php if( ! empty( $count ) ) : ?>
+<?php if( ! empty( $count ) ) { ?>
 	<div class="rating-stars rating-stars-<?php echo $size; ?>">
 		<?php for( $i = 1; $i <= $floor; $i++ ) : ?>
 			<div class="rating-star rating-star-checked"></div>
@@ -23,4 +23,10 @@ $half = ( $float && round( $rating ) != floor( $rating ) ) ? true : false;
 			<div class="rating-star"></div>
 		<?php endfor; ?>
 	</div>
-<?php endif; ?>
+<?php }else{ ?>
+	<div class="rating-stars rating-stars-<?php echo $size; ?>">
+		<?php for( $i = 0; $i < 5; $i++ ) : ?>
+			<div class="rating-star"></div>
+		<?php endfor; ?>
+	</div>
+<?php } ?>
