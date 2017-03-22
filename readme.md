@@ -140,6 +140,14 @@ The built in sizes are `large`, `medium`, 'small' and `tiny`.
 <?php snippet('rating-stars'); ?>
 ```
 
+**show rating from other page**
+
+You can also show the rating from other pages with the snippet:
+
+```php
+<?php snippet('rating-stars', array('p' => $page)); ?>
+```
+
 ### Page methods
 
 ```php
