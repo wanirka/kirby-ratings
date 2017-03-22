@@ -1,7 +1,8 @@
 <?php
 $size = ( ! empty( $size ) ) ? $size : 'small';
-$rating = $page->ratingAverage();
-$count = $page->ratingCount();
+$p = ( ! empty( $p ) ) ? $p : $page;
+$rating = $p->ratingAverage();
+$count = $p->ratingCount();
 $total = 5;
 $floor = floor($rating);
 $float = is_numeric( $rating ) && floor( $rating ) != $rating;
